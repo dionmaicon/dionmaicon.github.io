@@ -34,33 +34,37 @@ const postsAsRef = ref<WPPost[]>((response.data || []) as unknown as WPPost[]);
 
 const posts = computed(() => postsAsRef.value.map(post => PostMapper.toDomain(post)));
 
-if (process.client) {
-  useSeoMeta({
-      title: "Dion's Blog",
-      description: "For good or bad, I'll talk about it anyway :)",
-      ogTitle: "Dion's  Blog",
-      ogDescription: "For good or bad, I'll talk about it anyway :)",
-      ogImage: `/images/main.jpg`,
-      ogUrl: window.location.href,
-      twitterTitle: "Dion's Blog",
-      twitterDescription: "For good or bad, I'll talk about it anyway :)",
-      twitterImage: '/images/main.jpg',
-      twitterCard: 'summary'
-  })
+let url = "https://dionmaicon.github.io/";
 
-  useHead({
-    htmlAttrs: {
-      lang: 'en'
-    },
-    link: [
-      {
-        rel: 'icon',
-        type: 'image/png',
-        href: '/favicon.ico'
-      }
-    ],
-  })
+if (process.client ) {
+    url = window.location.href;
 }
+
+useSeoMeta({
+    title: "Dion's Blog",
+    description: "For good or bad, I'll talk about it anyway :)",
+    ogTitle: "Dion's  Blog",
+    ogDescription: "For good or bad, I'll talk about it anyway :)",
+    ogImage: `/images/main.jpg`,
+    ogUrl: url,
+    twitterTitle: "Dion's Blog",
+    twitterDescription: "For good or bad, I'll talk about it anyway :)",
+    twitterImage: '/images/main.jpg',
+    twitterCard: 'summary'
+})
+
+useHead({
+  htmlAttrs: {
+    lang: 'en'
+  },
+  link: [
+    {
+      rel: 'icon',
+      type: 'image/png',
+      href: '/favicon.ico'
+    }
+  ],
+})
 
 
 </script>
