@@ -1,4 +1,5 @@
 <template>
+  <!-- Update content: 1 -->
   <div>
     <NuxtLayout>
       <TheHeader></TheHeader>
