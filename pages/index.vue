@@ -1,5 +1,8 @@
 <template>
 <div>
+    <div class="text-center">
+      <ImageLoader src="images/logo.png"  alt="Logo" width="32" />
+    </div>
     <div class="grid gap-4 grid-cols-1 lg:grid-cols-2 p-4">
         <div v-for="post in posts" :key="post.id">
             <div class="shadow rounded-md p-4 min-h-350">
