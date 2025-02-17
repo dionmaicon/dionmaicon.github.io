@@ -67,7 +67,6 @@ const query = gql`
                 }
             }
             seo {
-                fullHead
                 canonical
                 title
                 metaDesc

@@ -4042,7 +4042,7 @@ nuxt-graphql-request@^8.1.1:
     remeda "2.11.0"
     unplugin "1.12.2"
 
-nuxt@^3.8.0:
+nuxt@^3.15.0:
   version "3.15.4"
   resolved "https://registry.npmjs.org/nuxt/-/nuxt-3.15.4.tgz"
   integrity sha512-hSbZO4mR0uAMJtZPNTnCfiAtgleoOu28gvJcBNU7KQHgWnNXPjlWgwMczko2O4Tmnv9zIe/CQged+2HsPwl2ZA==
