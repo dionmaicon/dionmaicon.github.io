@@ -1,6 +1,0 @@
-// virtual:nuxt:%2Fmedia%2Fdd%2FData%2FProjects%2Fdionmaicon.github.io%2F.nuxt%2Fcss.mjs
-const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/tailwindcss/tailwind.css");
-const __vite_ssr_import_1__ = await __vite_ssr_import__("/assets/main.css");
-
-//# sourceMappingSource=vite-node
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInZpcnR1YWw6bnV4dDolMkZtZWRpYSUyRmRkJTJGRGF0YSUyRlByb2plY3RzJTJGZGlvbm1haWNvbi5naXRodWIuaW8lMkYubnV4dCUyRmNzcy5tanMiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFwiL21lZGlhL2RkL0RhdGEvUHJvamVjdHMvZGlvbm1haWNvbi5naXRodWIuaW8vbm9kZV9tb2R1bGVzL3RhaWx3aW5kY3NzL3RhaWx3aW5kLmNzc1wiO1xuaW1wb3J0IFwifi9hc3NldHMvbWFpbi5jc3NcIjsiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQSJ9

@@ -1,9 +1,0 @@
-// virtual:nuxt:%2Fmedia%2Fdd%2FData%2FProjects%2Fdionmaicon.github.io%2F.nuxt%2Fcomponents.plugin.mjs
-
-const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/nuxt/dist/app/nuxt.js", {"importedNames":["defineNuxtPlugin"]});
-__vite_ssr_exports__.default = (0,__vite_ssr_import_0__.defineNuxtPlugin)({
-  name: 'nuxt:global-components',
-})
-
-//# sourceMappingSource=vite-node
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInZpcnR1YWw6bnV4dDolMkZtZWRpYSUyRmRkJTJGRGF0YSUyRlByb2plY3RzJTJGZGlvbm1haWNvbi5naXRodWIuaW8lMkYubnV4dCUyRmNvbXBvbmVudHMucGx1Z2luLm1qcyJdLCJzb3VyY2VzQ29udGVudCI6WyJcbmltcG9ydCB7IGRlZmluZU51eHRQbHVnaW4gfSBmcm9tICcjYXBwL251eHQnXG5leHBvcnQgZGVmYXVsdCBkZWZpbmVOdXh0UGx1Z2luKHtcbiAgbmFtZTogJ251eHQ6Z2xvYmFsLWNvbXBvbmVudHMnLFxufSlcbiJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxDQUFBO0FBQ0E7QUFDQSw4QkFBYyxJQUFDLHVDQUFnQixDQUFDO0FBQ2hDLENBQUMsQ0FBQyxJQUFJLENBQUMsQ0FBQyxDQUFDLElBQUksQ0FBQyxNQUFNLENBQUMsVUFBVSxDQUFDO0FBQ2hDLENBQUM7In0=
