@@ -1,0 +1,24 @@
+{
+  "time": "2/17/2025, 10:23:20 AM",
+  "externalize": {
+    "/node_modules/vue/index.js": "file:///media/dd/Data/Projects/dionmaicon.github.io/node_modules/vue/index.js",
+    "ofetch": "file:///media/dd/Data/Projects/dionmaicon.github.io/node_modules/ofetch/dist/node.mjs",
+    "ufo": "file:///media/dd/Data/Projects/dionmaicon.github.io/node_modules/ufo/dist/index.mjs",
+    "hookable": "file:///media/dd/Data/Projects/dionmaicon.github.io/node_modules/hookable/dist/index.mjs",
+    "unctx": "file:///media/dd/Data/Projects/dionmaicon.github.io/node_modules/unctx/dist/index.mjs",
+    "h3": "file:///media/dd/Data/Projects/dionmaicon.github.io/node_modules/h3/dist/index.mjs",
+    "unhead": "file:///media/dd/Data/Projects/dionmaicon.github.io/node_modules/unhead/dist/index.mjs",
+    "@unhead/shared": "file:///media/dd/Data/Projects/dionmaicon.github.io/node_modules/@unhead/shared/dist/index.mjs",
+    "@unhead/dom": "file:///media/dd/Data/Projects/dionmaicon.github.io/node_modules/@unhead/dom/dist/index.mjs",
+    "/node_modules/unctx/dist/index.mjs": "file:///media/dd/Data/Projects/dionmaicon.github.io/node_modules/unctx/dist/index.mjs",
+    "vue-router": "file:///media/dd/Data/Projects/dionmaicon.github.io/node_modules/vue-router/dist/vue-router.node.mjs",
+    "radix3": "file:///media/dd/Data/Projects/dionmaicon.github.io/node_modules/radix3/dist/index.mjs",
+    "defu": "file:///media/dd/Data/Projects/dionmaicon.github.io/node_modules/defu/dist/defu.mjs",
+    "devalue": "file:///media/dd/Data/Projects/dionmaicon.github.io/node_modules/devalue/index.js",
+    "graphql-request": "file:///media/dd/Data/Projects/dionmaicon.github.io/node_modules/graphql-request/build/entrypoints/main.js",
+    "remeda": "file:///media/dd/Data/Projects/dionmaicon.github.io/node_modules/remeda/dist/index.js",
+    "consola": "file:///media/dd/Data/Projects/dionmaicon.github.io/node_modules/consola/dist/index.mjs",
+    "vue/server-renderer": "file:///media/dd/Data/Projects/dionmaicon.github.io/node_modules/vue/server-renderer/index.mjs",
+    "highlight.js": "file:///media/dd/Data/Projects/dionmaicon.github.io/node_modules/highlight.js/es/index.js"
+  }
+}

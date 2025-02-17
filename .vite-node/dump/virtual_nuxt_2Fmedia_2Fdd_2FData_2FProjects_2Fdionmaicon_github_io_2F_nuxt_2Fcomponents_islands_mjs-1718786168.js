@@ -1,0 +1,9 @@
+// virtual:nuxt:%2Fmedia%2Fdd%2FData%2FProjects%2Fdionmaicon.github.io%2F.nuxt%2Fcomponents.islands.mjs
+const __vite_ssr_import_0__ = await __vite_ssr_import__("vue", {"importedNames":["defineAsyncComponent"]});
+const islandComponents = false ? {} : {
+
+}
+Object.defineProperty(__vite_ssr_exports__, "islandComponents", { enumerable: true, configurable: true, get(){ return islandComponents }});
+
+//# sourceMappingSource=vite-node
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBQUE7QUFDTyxLQUFLLENBQUMsZ0JBQWdCLENBQUMsQ0FBQyxDQUFDLEtBQWtCLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQzs7QUFFMUQiLCJuYW1lcyI6W10sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbInZpcnR1YWw6bnV4dDolMkZtZWRpYSUyRmRkJTJGRGF0YSUyRlByb2plY3RzJTJGZGlvbm1haWNvbi5naXRodWIuaW8lMkYubnV4dCUyRmNvbXBvbmVudHMuaXNsYW5kcy5tanMiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgZGVmaW5lQXN5bmNDb21wb25lbnQgfSBmcm9tICd2dWUnXG5leHBvcnQgY29uc3QgaXNsYW5kQ29tcG9uZW50cyA9IGltcG9ydC5tZXRhLmNsaWVudCA/IHt9IDoge1xuXG59Il0sImZpbGUiOiJ2aXJ0dWFsOm51eHQ6JTJGbWVkaWElMkZkZCUyRkRhdGElMkZQcm9qZWN0cyUyRmRpb25tYWljb24uZ2l0aHViLmlvJTJGLm51eHQlMkZjb21wb25lbnRzLmlzbGFuZHMubWpzIn0=

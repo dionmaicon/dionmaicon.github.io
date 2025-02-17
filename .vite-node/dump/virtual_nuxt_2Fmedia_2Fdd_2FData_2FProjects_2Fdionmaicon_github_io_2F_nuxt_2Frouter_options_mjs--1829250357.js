@@ -1,0 +1,15 @@
+// virtual:nuxt:%2Fmedia%2Fdd%2FData%2FProjects%2Fdionmaicon.github.io%2F.nuxt%2Frouter.options.mjs
+const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/nuxt/dist/pages/runtime/router.options.js", {"importedNames":["default"]});
+const configRouterOptions = {
+  hashMode: false,
+  scrollBehaviorType: "auto"
+};
+const hashMode = false
+Object.defineProperty(__vite_ssr_exports__, "hashMode", { enumerable: true, configurable: true, get(){ return hashMode }});;
+__vite_ssr_exports__.default = {
+...configRouterOptions,
+...__vite_ssr_import_0__.default,
+}
+
+//# sourceMappingSource=vite-node
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInZpcnR1YWw6bnV4dDolMkZtZWRpYSUyRmRkJTJGRGF0YSUyRlByb2plY3RzJTJGZGlvbm1haWNvbi5naXRodWIuaW8lMkYubnV4dCUyRnJvdXRlci5vcHRpb25zLm1qcyJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgcm91dGVyT3B0aW9uczAgZnJvbSBcIi9tZWRpYS9kZC9EYXRhL1Byb2plY3RzL2Rpb25tYWljb24uZ2l0aHViLmlvL25vZGVfbW9kdWxlcy9udXh0L2Rpc3QvcGFnZXMvcnVudGltZS9yb3V0ZXIub3B0aW9ucy5qc1wiO1xuY29uc3QgY29uZmlnUm91dGVyT3B0aW9ucyA9IHtcbiAgaGFzaE1vZGU6IGZhbHNlLFxuICBzY3JvbGxCZWhhdmlvclR5cGU6IFwiYXV0b1wiXG59XG5leHBvcnQgY29uc3QgaGFzaE1vZGUgPSBmYWxzZVxuZXhwb3J0IGRlZmF1bHQge1xuLi4uY29uZmlnUm91dGVyT3B0aW9ucyxcbi4uLnJvdXRlck9wdGlvbnMwLFxufSJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtBQUNBLEtBQUssQ0FBQyxtQkFBbUIsQ0FBQyxDQUFDLENBQUM7QUFDNUIsQ0FBQyxDQUFDLFFBQVEsQ0FBQyxDQUFDLEtBQUs7QUFDakIsQ0FBQyxDQUFDLGtCQUFrQixDQUFDLENBQUMsQ0FBQyxJQUFJO0FBQzNCO0FBQ08sS0FBSyxDQUFDLFFBQVEsQ0FBQyxDQUFDLENBQUM7O0FBQ3hCLDhCQUFjLENBQUM7QUFDZixDQUFDLENBQUMsQ0FBQyxtQkFBbUI7QUFDdEIsQ0FBQyxDQUFDLENBQUMsNkJBQWM7QUFDakIifQ==
