@@ -29,12 +29,6 @@ import type { WPPost, GQPostsResponse } from "~/types/IPost";
 import { gql } from "nuxt-graphql-request/utils";
 const { $graphql } = useNuxtApp();
 
-const runtimeConfig = useRuntimeConfig();
-
-interface Response {
-    data: WPPost[];
-}
-
 const query = gql`
     query allPosts {
         dmposts {
