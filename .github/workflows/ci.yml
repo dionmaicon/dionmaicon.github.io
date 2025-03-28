@@ -15,14 +15,14 @@ jobs:
       - run: corepack enable
       - uses: actions/setup-node@v3
         with:
-          node-version: "18"
+          node-version: "22"
 
       # Pick your own package manager and build script
       - run: npm install
       - run: npx nuxi generate
         env:
           NITRO_PRESET: github_pages
-          API_BASE: https://content.clubedoblockchain.com/wp/graphql
+          API_BASE: https://content.tcheblock.com/wp/graphql
           APP_BASE: https://dionmaicon.github.io
 
       - name: Upload artifact
