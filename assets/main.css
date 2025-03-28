@@ -17,6 +17,7 @@
     --bg-secondary: #071521;
     --border-color: #0d2538;
 }
+
 .sepia-mode {
     --color: #433422;
     --color-secondary: #00ffff;
@@ -33,6 +34,7 @@ body {
     color: var(--color);
     transition: background-color 0.3s;
 }
+
 a {
     color: var(--color-primary);
 }
@@ -106,6 +108,29 @@ h5 {
     margin-left: 5%;
 }
 
+.nuxt-content table {
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-bottom: 20px;
+}
+
+.nuxt-content th {
+  padding: 5px;
+  border: 1px solid var(--color);
+}
+
+.nuxt-content td {
+  padding: 5px;
+  border: 1px solid var(--color);
+}
+
+.nuxt-content img {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
 .nuxt-content li:last-child {
     margin-bottom: 20px;
 }
@@ -119,6 +144,14 @@ h5 {
     border-radius: 0.3em;
     margin-bottom: 20px;
     border: 1px solid var(--color);
+}
+
+.hljs {
+  padding: 1em;
+  overflow-x: auto;
+  border-radius: 0.3em;
+  margin-bottom: 20px;
+  border: 1px solid var(--color);
 }
 
 .icon.icon-link {
