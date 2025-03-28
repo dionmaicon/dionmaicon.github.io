@@ -74,7 +74,6 @@ const query = gql`
                 metaRobotsNoindex
                 metaRobotsNofollow
                 opengraphAuthor
-                opengraphDescription
                 opengraphTitle
                 opengraphDescription
                 opengraphImage {
