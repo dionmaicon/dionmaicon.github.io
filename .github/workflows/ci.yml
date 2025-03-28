@@ -15,14 +15,15 @@ jobs:
       - run: corepack enable
       - uses: actions/setup-node@v3
         with:
-          node-version: "18"
+          node-version: "22"
 
       # Pick your own package manager and build script
       - run: npm install
       - run: npx nuxi generate
         env:
           NITRO_PRESET: github_pages
-          API_BASE: https://content.clubedoblockchain.com.br/wp-json/wp/v2
+          API_BASE: https://content.tcheblock.com/wp/graphql
+          APP_BASE: https://dionmaicon.github.io
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
@@ -36,8 +37,8 @@ jobs:
 
     # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
     permissions:
-      pages: write      # to deploy to Pages
-      id-token: write   # to verify the deployment originates from an appropriate source
+      pages: write # to deploy to Pages
+      id-token: write # to verify the deployment originates from an appropriate source
 
     # Deploy to the github_pages environment
     environment:
