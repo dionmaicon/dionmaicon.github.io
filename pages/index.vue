@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="text-center">
-            <ImageLoader src="images/logo.png" alt="Blog Logo" width="32" />
+            <Logo src="images/logo.png" alt="Blog Logo" />
         </div>
         <div class="grid gap-4 grid-cols-1 lg:grid-cols-2 p-4">
             <div v-for="post in posts" :key="post.id">
@@ -44,16 +44,47 @@ const query = gql`
     }
 `;
 
-const response = await $graphql.default.request<GQPostsResponse>(query);
+// Demo data fallback
+const demoData: WPPost[] = [
+    {
+        id: 1,
+        title: "Welcome to Dion's Blog",
+        date: new Date().toISOString(),
+        slug: "welcome",
+        content:
+            "<p>This is a demo post. Configure your GraphQL API endpoint in .env file to load real content.</p>",
+        excerpt:
+            "<p>This is a demo post. Configure your GraphQL API endpoint to load real content.</p>",
+        seo: {} as any,
+        featuredImage: { node: { id: "1", sourceUrl: "" } },
+    },
+    {
+        id: 2,
+        title: "Getting Started",
+        date: new Date().toISOString(),
+        slug: "getting-started",
+        content:
+            "<p>Set API_BASE in your .env file to point to your WordPress GraphQL endpoint.</p>",
+        excerpt:
+            "<p>Set API_BASE in your .env file to point to your WordPress GraphQL endpoint.</p>",
+        seo: {} as any,
+        featuredImage: { node: { id: "2", sourceUrl: "" } },
+    },
+];
 
-const postsAsRef = ref<WPPost[]>(
-    (response.dmposts.nodes || []) as unknown as WPPost[],
-);
+let postsAsRef = ref<WPPost[]>([]);
+
+try {
+    const response = await $graphql.default.request<GQPostsResponse>(query);
+    postsAsRef.value = (response.dmposts.nodes || []) as unknown as WPPost[];
+} catch (error) {
+    console.warn("GraphQL API not available, using demo data:", error);
+    postsAsRef.value = demoData;
+}
 
 const posts = computed(() =>
     (postsAsRef.value || []).map((post) => PostMapper.toDomain(post)),
 );
-// const posts = [] as unknown as WPPost[];
 
 let url = "https://dionmaicon.github.io/";
 
