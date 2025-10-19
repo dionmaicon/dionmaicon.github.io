@@ -45,32 +45,7 @@ const query = gql`
 `;
 
 // Demo data fallback
-const demoData: WPPost[] = [
-    {
-        id: 1,
-        title: "Welcome to Dion's Blog",
-        date: new Date().toISOString(),
-        slug: "welcome",
-        content:
-            "<p>This is a demo post. Configure your GraphQL API endpoint in .env file to load real content.</p>",
-        excerpt:
-            "<p>This is a demo post. Configure your GraphQL API endpoint to load real content.</p>",
-        seo: {} as any,
-        featuredImage: { node: { id: "1", sourceUrl: "" } },
-    },
-    {
-        id: 2,
-        title: "Getting Started",
-        date: new Date().toISOString(),
-        slug: "getting-started",
-        content:
-            "<p>Set API_BASE in your .env file to point to your WordPress GraphQL endpoint.</p>",
-        excerpt:
-            "<p>Set API_BASE in your .env file to point to your WordPress GraphQL endpoint.</p>",
-        seo: {} as any,
-        featuredImage: { node: { id: "2", sourceUrl: "" } },
-    },
-];
+const demoData: WPPost[] = [];
 
 let postsAsRef = ref<WPPost[]>([]);
 
