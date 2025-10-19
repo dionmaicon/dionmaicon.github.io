@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="text-center">
-            <ImageLoader src="images/logo.png" alt="Blog Logo" width="32" />
+            <Logo src="images/logo.png" alt="Blog Logo" />
         </div>
         <div class="grid gap-4 grid-cols-1 lg:grid-cols-2 p-4">
             <div v-for="post in posts" :key="post.id">
@@ -44,16 +44,22 @@ const query = gql`
     }
 `;
 
-const response = await $graphql.default.request<GQPostsResponse>(query);
+// Demo data fallback
+const demoData: WPPost[] = [];
 
-const postsAsRef = ref<WPPost[]>(
-    (response.dmposts.nodes || []) as unknown as WPPost[],
-);
+let postsAsRef = ref<WPPost[]>([]);
+
+try {
+    const response = await $graphql.default.request<GQPostsResponse>(query);
+    postsAsRef.value = (response.dmposts.nodes || []) as unknown as WPPost[];
+} catch (error) {
+    console.warn("GraphQL API not available, using demo data:", error);
+    postsAsRef.value = demoData;
+}
 
 const posts = computed(() =>
     (postsAsRef.value || []).map((post) => PostMapper.toDomain(post)),
 );
-// const posts = [] as unknown as WPPost[];
 
 let url = "https://dionmaicon.github.io/";
 
