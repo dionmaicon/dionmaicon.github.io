@@ -22,7 +22,7 @@ jobs:
       - run: npx nuxi generate
         env:
           NITRO_PRESET: github_pages
-          API_BASE: https://content.tcheblock.com/wp/graphql
+          API_BASE: https://content.tchebit.com/wp/graphql
           APP_BASE: https://dionmaicon.github.io
 
       - name: Upload artifact
