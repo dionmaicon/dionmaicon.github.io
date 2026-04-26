@@ -46,6 +46,16 @@ export type GQPostsResponse = {
       slug: string;
       id: number;
       excerpt: string;
+      featuredImage: {
+        node: {
+          id: string;
+          sourceUrl: string;
+        };
+      };
+      seo: {
+        metaDesc: string;
+        opengraphDescription: string;
+      };
     }[];
   };
 };
@@ -82,6 +92,7 @@ export type Post = {
   title: string;
   content: string;
   excerpt: string;
+  description: string;
   seo: PostTypeSEO;
   featuredImage: string;
 };

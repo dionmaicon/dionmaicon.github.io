@@ -53,5 +53,11 @@ export default defineNuxtConfig({
     },
   },
 
+  nitro: {
+    prerender: {
+      routes: ["/sitemap.xml"],
+    },
+  },
+
   compatibilityDate: "2025-02-02",
 });
