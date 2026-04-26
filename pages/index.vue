@@ -180,7 +180,10 @@ useSeoMeta({
 
 useHead({
     htmlAttrs: { lang: "en" },
-    link: [{ rel: "icon", type: "image/png", href: "/favicon.ico" }],
+    link: [
+        { rel: "icon", type: "image/png", href: "/favicon.ico" },
+        { rel: "canonical", href: "https://dionmaicon.github.io/" },
+    ],
 });
 </script>
 

@@ -95,23 +95,51 @@ const meta = PostMetaHead.prepareHead(post.value);
 
 const getDescription = (yoastMeta: Post["seo"]) => yoastMeta?.metaDesc;
 
+const SITE_URL = "https://dionmaicon.github.io";
+
+const getCanonical = () => `${SITE_URL}/posts/${slug}`;
+
 const getOgUrl = () => {
     if (import.meta.client) return window.location.href;
-    return `${runtimeConfig.public.appBase}/posts/${slug}`;
+    return getCanonical();
 };
 
+const description = getDescription(post.value.seo) ?? "";
+const author = post.value.seo?.opengraphAuthor || "Dion";
+
 useSeoMeta({
-    description: getDescription(post.value.seo),
+    description,
     ogTitle: post.value.title,
-    ogDescription: getDescription(post.value.seo),
+    ogDescription: description,
     ogImage: post.value.featuredImage,
     ogLocale: "en_US",
+    ogType: "article",
+    articleAuthor: [author],
+    articlePublishedTime: post.value.date,
     twitterTitle: post.value.title,
-    twitterDescription: getDescription(post.value.seo),
+    twitterDescription: description,
     twitterImage: post.value.featuredImage,
     twitterCard: post.value.featuredImage ? "summary_large_image" : "summary",
     ogUrl: getOgUrl(),
 });
+
+const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.value.title,
+    description,
+    image: post.value.featuredImage,
+    datePublished: post.value.date ? new Date(post.value.date).toISOString() : undefined,
+    dateModified: post.value.date ? new Date(post.value.date).toISOString() : undefined,
+    author: { "@type": "Person", name: author, url: SITE_URL },
+    publisher: {
+        "@type": "Organization",
+        name: "Dion's Blog",
+        logo: { "@type": "ImageObject", url: `${SITE_URL}/images/logo.png` },
+    },
+    mainEntityOfPage: { "@type": "WebPage", "@id": getCanonical() },
+    url: getCanonical(),
+};
 
 const formatDate = (date: string): string =>
     new Date(date).toLocaleDateString("en-US", {
@@ -124,7 +152,16 @@ useHead({
     title: `${post.value.title} - Dion's Blog`,
     meta,
     htmlAttrs: { lang: "en" },
-    link: [{ rel: "icon", type: "image/png", href: "/favicon.ico" }],
+    link: [
+        { rel: "icon", type: "image/png", href: "/favicon.ico" },
+        { rel: "canonical", href: getCanonical() },
+    ],
+    script: [
+        {
+            type: "application/ld+json",
+            children: JSON.stringify(jsonLd),
+        },
+    ],
 });
 
 onMounted(() => {
