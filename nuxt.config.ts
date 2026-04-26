@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@nuxtjs/color-mode",
     "nuxt-graphql-request",
+    "@nuxt/image",
   ],
   css: ["~/assets/main.css"],
 
