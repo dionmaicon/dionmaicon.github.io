@@ -33,6 +33,7 @@
 
 <script setup lang="ts">
 import PostMapper from "@/utils/PostMapper";
+import PostMetaHead from "@/utils/PostMetaHead";
 import type { Post, WPPost, GQSinglePostResponse } from "~/types/IPost";
 import hljs from "highlight.js";
 import { useRoute } from "vue-router";

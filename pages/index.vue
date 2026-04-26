@@ -70,6 +70,7 @@
 <script setup lang="ts">
 import type { WPPost, GQPostsResponse } from "~/types/IPost";
 import { gql } from "nuxt-graphql-request/utils";
+import PostMapper from "~/utils/PostMapper";
 
 const { $graphql } = useNuxtApp();
 
