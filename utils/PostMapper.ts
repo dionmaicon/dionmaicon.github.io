@@ -10,6 +10,7 @@ export default class PostMapper {
       title: post.title,
       content: post.content,
       excerpt: post.excerpt,
+      description: post.seo?.opengraphDescription || post.seo?.metaDesc || "",
       seo: post.seo,
       featuredImage: post.featuredImage?.node?.sourceUrl,
     } as Post;

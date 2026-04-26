@@ -93,8 +93,13 @@ a {
 }
 .nuxt-content p {
     margin-bottom: 20px;
-    text-align: justify;
-    text-justify: inter-word;
+}
+
+@media screen and (min-width: 769px) {
+    .nuxt-content p {
+        text-align: justify;
+        text-justify: inter-word;
+    }
 }
 
 .nuxt-content h3,
