@@ -1,5 +1,4 @@
 const SITE_URL = "https://dionmaicon.github.io";
-const GQL_ENDPOINT = "https://content.tchebit.com/wp/graphql";
 
 const QUERY = `query {
   dmposts {
@@ -13,12 +12,15 @@ const QUERY = `query {
 export default defineEventHandler(async (event) => {
   setHeader(event, "Content-Type", "application/xml; charset=UTF-8");
 
+  const config = useRuntimeConfig();
+  const gqlEndpoint = config.public.apiBase as string;
+
   let posts: { slug: string; date: string }[] = [];
 
   try {
     const data = await $fetch<{
       data: { dmposts: { nodes: { slug: string; date: string }[] } };
-    }>(GQL_ENDPOINT, {
+    }>(gqlEndpoint, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ query: QUERY }),
